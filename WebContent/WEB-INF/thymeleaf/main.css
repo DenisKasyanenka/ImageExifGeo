@@ -1,0 +1,53 @@
+.container{
+	outline: 1px solid #181783;
+	outline-offset: 2px
+	padding: 10px;
+	margin: 10px;
+	height: 800px;
+}
+
+.preview{
+	height: 200px;
+	width: 100%;
+	outline: 1px solid #181783;
+	outline-offset: 2px
+	padding: 10px;
+	margin: 10px;
+	overflow-x: scroll; 
+	overflow-y: hidden;
+	overflow: scroll;
+}
+
+.content{
+	
+	outline: 1px solid #181783;
+	outline-offset: 2px
+	padding: 10px;
+	margin: 10px;
+	height: 300px;
+}
+.description{
+	
+	outline: 1px solid #181783;
+	outline-offset: 2px
+	padding: 10px;
+	margin: 10px;
+	height: 265px;
+}
+
+.footer{
+	background:#ffab62;
+	outline: 1px solid #181783;
+	position: relative;
+	bottom: 0px;
+	outline-offset: 2px
+	padding: 10px;
+	margin: 10px;
+	height:35px;
+
+}
+
+.preview_item{
+	margin:10px;
+    display:inline-block;
+}

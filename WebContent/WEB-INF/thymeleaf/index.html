@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap-theme.css}" />
+<script th:src="@{/js/jquery-2.1.4.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<link rel="stylesheet" type="text/css" th:href="@{main.css}" />
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="http://tinymce.cachefly.net/4.2/tinymce.min.js"></script>
+<script th:src="@{main.js}"></script>
+
+<script>
+tinymce.init({
+    
+    theme: "modern",
+    resize: "both",
+    min_width: 300,
+    max_width: 300,
+    selector: '.textarea',
+    plugins : "autoresize"
+    }) 
+</script>
+
+</head>
+<body>
+	<input type='text' id="number" hidden="" th:value="${number}"></input>
+	<div class="container">
+
+		<div class="row">
+			<!-- превью -->
+			<div class="preview"></div>
+			<!-- превью -->
+		</div>
+		<!-- просмотр -->
+		<div class="row content">
+			<div class="col-md-4" id="display_image"></div>
+			<div class="col-md-4 exif" id="exif"></div>
+			<div class="col-md-4" id="gmap_holder">
+				<div id="googleMap" class="gmap"></div>
+			</div>
+		</div>
+
+		<div class="row description">
+			<div class="col-md-6">
+				<h4>User Image Description</h4>
+
+				<div hidden="" id="textarea_span">
+					<div class="textarea"></div>
+					<input type="button" id="save_desc" value="Сохранить описание"></input>
+					<input type="text" id="Exifid" hidden=""></input>
+				</div>
+
+				<div id="edit_desc_span">
+					<p id="desc_text"></p>
+					<a id="edit_desc" href='#'>изменить/добавить</a>
+				</div>
+
+
+			</div>
+			<div class=".col-md-6"></div>
+		</div>
+
+	</div>
+
+	<div class="container footer-container">
+		<div class="footer row">
+			<form class="footer-item" id="form" th:object="${imageForm}"
+				method="POST" th:action="@{/uploadFile}"
+				enctype="multipart/form-data">
+				<ul>
+					<li>File to upload:</li>
+					<li><input id="file" type="file" accept="image/*" name="file"
+						class="footer-item" /></li>
+					<li><input type="submit" value="Upload" class="footer-item" />
+						Press here to upload the file!</li>
+					<input hidden="" id="name" type="text" name="name" />
+				</ul>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

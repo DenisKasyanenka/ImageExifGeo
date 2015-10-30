@@ -1,0 +1,68 @@
+.container{
+	
+	padding: 20px;
+	margin: 20px;
+	color: gray;
+}
+
+.preview{
+	height:180px;
+	outline: 1px solid #181783;
+	outline-offset: 2px
+	padding: 10px;
+	white-space:nowrap;
+    overflow-x:auto;
+	
+
+}
+
+.content{
+	
+	
+}
+.description{
+	height 200px;
+}
+
+.footer{
+	background:#ffab62;
+	outline: 1px solid #181783;
+		
+}
+/**
+.footer-container{
+	position: fixed;
+	bottom:0px;
+}
+**/
+.footer-item li{
+	display: inline;
+	float: left;
+}
+
+.preview_item{
+	margin:10px;
+    float: left;
+	display: inline-block;
+}
+
+.big_image{
+	width: 330px;
+	margin-top:20px;
+	outline: 1px solid #181783;
+}
+
+.exif{
+	margin-left: 30px;
+}
+
+.gmap{
+	margin: 10px;
+	width:300px;
+	height:300px;
+	
+}
+
+#display_image{
+	width:350px;
+}
