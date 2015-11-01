@@ -21,7 +21,7 @@ public class ExifDao implements EntityDao<ExifInformation> {
 	@Override
 	public ExifInformation findById(Integer i) {
 		ExifInformation exif = exifRepository.findOne(i);
-		log.info("найдена информация по файлу с id "+i+"содержание: "+exif.toString());
+		log.info("найдена информация по файлу с id " + i + "содержание: " + exif.toString());
 		return exif;
 	}
 
@@ -37,14 +37,14 @@ public class ExifDao implements EntityDao<ExifInformation> {
 
 	@Override
 	public Integer save(ExifInformation t) {
-		log.info("найдена информация: "+t.toString());
+		log.info("найдена информация: " + t.toString());
 		return exifRepository.saveAndFlush(t).getId();
 	}
 
 	@Override
 	public Integer findAllCount() {
 		int count = (int) exifRepository.count();
-		log.info("посчитано общее количество загруженных изображений: "+count);
+		log.info("посчитано общее количество загруженных изображений: " + count);
 		return count;
 	}
 

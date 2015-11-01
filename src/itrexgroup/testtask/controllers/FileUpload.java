@@ -39,9 +39,7 @@ public class FileUpload {
 	UploadService uploadService;
 
 	@RequestMapping(value = "/images", method = RequestMethod.POST)
-	public @ResponseBody String uploadFile(@RequestParam("name") String name,
-			@RequestParam("file") MultipartFile file) throws IOException,
-			ImageProcessingException, ParseException {
+	public @ResponseBody String uploadFile(@RequestParam("name") String name, @RequestParam("file") MultipartFile file) throws IOException, ImageProcessingException, ParseException {
 		if (!file.isEmpty()) {
 			byte[] bytes = file.getBytes();
 			// против выкрутасов Хрома

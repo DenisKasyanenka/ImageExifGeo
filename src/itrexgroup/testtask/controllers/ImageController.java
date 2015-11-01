@@ -20,14 +20,12 @@ public class ImageController {
 	ImageDao imageService;
 
 	@RequestMapping(value = "/images/{id}", method = RequestMethod.GET)
-	public @ResponseBody byte[] loadImage(HttpServletResponse res,
-			@PathVariable("id") Integer id) throws IOException {
+	public @ResponseBody byte[] loadImage(HttpServletResponse res, @PathVariable("id") Integer id) throws IOException {
 		return Files.readAllBytes(new File(imageService.getImagePath(id)).toPath());
 	}
 
 	@RequestMapping(value = "/thumbs/{id}", method = RequestMethod.GET)
-	public @ResponseBody byte[] loadIthumbnail(HttpServletResponse res,
-			@PathVariable("id") Integer id) throws IOException {
+	public @ResponseBody byte[] loadIthumbnail(HttpServletResponse res, @PathVariable("id") Integer id) throws IOException {
 		return Files.readAllBytes(new File(imageService.getThumbPath(id)).toPath());
 	}
 }

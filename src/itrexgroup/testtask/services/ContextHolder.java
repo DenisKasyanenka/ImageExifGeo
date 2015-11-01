@@ -13,20 +13,20 @@ import org.springframework.stereotype.Service;
 public class ContextHolder {
 
 	@Autowired
-    ServletContext context;
-	
+	ServletContext context;
+
 	@Autowired
 	Logger log;
-	
+
 	String imagePath;
 	String thumbsPath;
-	
+
 	@PostConstruct
-	private void init(){
-	imagePath = context.getRealPath(File.separator+"resources"+ File.separator+ "testimages"); 
-	thumbsPath = context.getRealPath(File.separator+"resources"+ File.separator+ "testimages"+File.separator+"thumbs");
-	log.info("imagePath = "+imagePath);
-	log.info("thumbsPath = "+ thumbsPath);
+	private void init() {
+		imagePath = context.getRealPath(File.separator + "resources" + File.separator + "testimages");
+		thumbsPath = context.getRealPath(File.separator + "resources" + File.separator + "testimages" + File.separator + "thumbs");
+		log.info("imagePath = " + imagePath);
+		log.info("thumbsPath = " + thumbsPath);
 	}
 
 	public String getImagePath() {
@@ -37,6 +37,4 @@ public class ContextHolder {
 		return thumbsPath;
 	}
 
-
-	
 }

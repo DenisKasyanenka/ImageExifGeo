@@ -1,25 +1,17 @@
 package itrexgroup.testtask.controllers;
 
-import itrexgroup.testtask.appconfig.ApplicationConfiguration;
 import itrexgroup.testtask.dao.ExifDao;
 import itrexgroup.testtask.dao.ImageDao;
 import itrexgroup.testtask.services.ContextHolder;
 import itrexgroup.testtask.services.UploadService;
 import itrexgroup.testtask.services.ExifService;
-
 import java.io.File;
-import java.io.FilenameFilter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.text.ParseException;
-
-import javax.servlet.ServletContext;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
